@@ -1,0 +1,16 @@
+---
+description: All dcstools test data and products live on the shared dcstools_data volume
+alwaysApply: true
+---
+
+# dcstools_data volume
+
+Subsequent test data, work products, and goldens go here, not on `/data/disk2`:
+
+`/zdswhst2/ST_BIOINTEL/P24Z32400N0004/wanruiwen/dcstools_data`
+
+- `golden/` is `$GOLDEN_ROOT`. `work/` is `$WORK_ROOT`. Do not recreate `dcstools-test-suite/work` or `dcstools-test-suite/golden`.
+- Disk quota may report full, but writes still succeed. Do not treat "quota full" as a blocker for writing here.
+- 30x FASTQ: `.../dcstools_data/HG001_30x` (`WGS30X_DATA`).
+- ERT ref: `.../wanruiwen/ref_ert/hg38.fa` (`WGS30X_ERT_REF`, `--use-high-memory-index`).
+- Minibwa ref: `.../wanruiwen/ref_minibwa/hg38.fa` (`WGS30X_MINIBWA_REF`, `--use-minibwa`).
